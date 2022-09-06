@@ -1,0 +1,41 @@
+{
+  "name": "template",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "start": "vite",
+    "build": "tsc && vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "@types/styled-components": "^5.1.26",
+    "@types/vite-plugin-react-svg": "^0.2.1",
+    "eslint-plugin-sonarjs": "^0.15.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "styled-components": "^5.3.5"
+  },
+  "devDependencies": {
+    "@babel/eslint-parser": "^7.18.9",
+    "@types/react": "^18.0.17",
+    "@types/react-dom": "^18.0.6",
+    "@typescript-eslint/eslint-plugin": "^5.36.2",
+    "@typescript-eslint/parser": "^5.36.2",
+    "@vitejs/plugin-react": "^2.1.0",
+    "eslint": "^8.23.0",
+    "eslint-config-airbnb-typescript": "^17.0.0",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-plugin-prettier": "^4.2.1",
+    "eslint-plugin-react": "^7.31.6",
+    "eslint-plugin-react-hooks": "^4.6.0",
+    "prettier": "^2.7.1",
+    "typescript": "^4.6.4",
+    "vite": "^3.1.0",
+    "vite-plugin-react-svg": "^0.2.0"
+  },
+  "main": "index.js",
+  "license": "MIT",
+  "description": "Setup React project",
+  "author": "Thomas Estanislau"
+}
