@@ -1,5 +1,5 @@
-import { px2rem } from '~/utils';
-import { Shapes } from '~/utils/types';
+import { px2rem } from "~/utils";
+import { Shapes } from "~/utils/types";
 
 export default {
   smallRadius: px2rem(4),
