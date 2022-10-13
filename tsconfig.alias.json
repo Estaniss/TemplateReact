@@ -1,0 +1,12 @@
+{
+  "compilerOptions": {
+    "rootDir": ".",
+    "baseUrl": "src",
+    "paths": {
+      "*": ["src/utils/types/*.ts"],
+      "~/*": ["*"]
+    }
+  },
+  "include": ["src/**/*", "src/utils/types/*.ts", "vite.config.ts"],
+  "exclude": ["node_modules"]
+}
