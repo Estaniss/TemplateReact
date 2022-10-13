@@ -6,33 +6,92 @@
   "scripts": {
     "start": "vite",
     "build": "tsc && vite build",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "pretty": "prettier --config ./.prettierrc --write \"src/**/*.{js,jsx,ts,tsx,json}\"",
+    "lint": "tsc && eslint \"src/**/*.{js,jsx,ts,tsx}\" --fix",
+    "clean": "rm -rf node_modules && yarn cache clean && yarn install"
   },
   "dependencies": {
-    "@types/styled-components": "^5.1.26",
-    "@types/vite-plugin-react-svg": "^0.2.1",
+    "axios": "^1.1.2",
     "eslint-plugin-sonarjs": "^0.15.0",
+    "formik": "^2.2.9",
+    "localforage": "^1.10.0",
+    "lodash": "^4.17.21",
+    "lottie-web": "^5.9.6",
+    "luxon": "^3.0.1",
+    "mobx": "^6.6.1",
+    "mobx-persist-store": "^1.0.6",
+    "mobx-react": "^7.5.2",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "styled-components": "^5.3.5"
+    "react-helmet": "^6.1.0",
+    "react-if": "^4.1.4",
+    "styled-components": "^5.3.5",
+    "yup": "^0.32.11"
+
   },
   "devDependencies": {
-    "@babel/eslint-parser": "^7.18.9",
-    "@types/react": "^18.0.17",
+    "@commitlint/cli": "^17.0.3",
+    "@commitlint/config-conventional": "^17.0.3",
+    "@types/axios": "^0.14.0",
+    "@types/history": "^5.0.0",
+    "@types/lodash": "^4.14.182",
+    "@types/luxon": "^2.4.0",
+    "@types/node": "^18.0.6",
+    "@types/react-document-title": "^2.0.5",
     "@types/react-dom": "^18.0.6",
-    "@typescript-eslint/eslint-plugin": "^5.36.2",
-    "@typescript-eslint/parser": "^5.36.2",
-    "@vitejs/plugin-react": "^2.1.0",
-    "eslint": "^8.23.0",
-    "eslint-config-airbnb-typescript": "^17.0.0",
+    "@types/react-helmet": "^6.1.5",
+    "@types/react-lottie": "^1.2.6",
+    "@types/react-router-dom": "^5.3.3",
+    "@types/styled-components": "^5.1.25",
+    "@types/yup": "^0.29.14",
+    "@typescript-eslint/eslint-plugin": "^5.30.7",
+    "@typescript-eslint/parser": "^5.30.7",
+    "@vitejs/plugin-react": "^2.0.0",
+    "commitizen": "^4.2.5",
+    "cz-conventional-changelog": "^3.3.0",
+    "eslint": "^8.20.0",
     "eslint-config-prettier": "^8.5.0",
+    "eslint-plugin-import": "^2.26.0",
+    "eslint-plugin-jsx-a11y": "^6.6.0",
     "eslint-plugin-prettier": "^4.2.1",
-    "eslint-plugin-react": "^7.31.6",
+    "eslint-plugin-promise": "^6.0.0",
+    "eslint-plugin-react": "^7.30.1",
     "eslint-plugin-react-hooks": "^4.6.0",
+    "eslint-plugin-sonarjs": "^0.13.0",
+    "husky": "8.0.1",
+    "lint-staged": "^13.0.3",
     "prettier": "^2.7.1",
-    "typescript": "^4.6.4",
-    "vite": "^3.1.0",
-    "vite-plugin-react-svg": "^0.2.0"
+    "solidarity": "^3.0.4",
+    "typescript": "^4.7.4",
+    "vite": "^3.0.2",
+    "vite-plugin-svgr": "^2.2.0"
+  },
+  "lint-staged": {
+    "*.{js,jsx,ts,tsx}": [
+      "yarn pretty",
+      "yarn lint"
+    ]
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
   },
   "main": "index.js",
   "license": "MIT",
