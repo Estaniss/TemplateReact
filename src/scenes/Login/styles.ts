@@ -14,13 +14,7 @@ const mediumRadius = getTheme("mediumRadius");
 
 export const Wrapper = styled(SceneWrapper)``;
 
-export const Content = styled.div`
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  height: 90vh;
-`;
+export const Content = styled.div``;
 
 export const InputLogin = styled.input`
   border-radius: ${mediumRadius};
@@ -44,4 +38,12 @@ export const SubmitButton = styled.button`
   padding: ${mediumSpacing};
   background: ${infoMain};
   color: ${commonWhite};
+`;
+
+export const FormGroup = styled.form`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 90vh;
 `;

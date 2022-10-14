@@ -1,8 +1,15 @@
 import React from "react";
-import { Wrapper } from "./styles";
+import { ErrorGift } from "~/assets/images";
+import { ErrorGif, ErrorWrapper, Wrapper } from "./styles";
 
 const NotFound: React.FC = () => {
-  return <Wrapper>Página not found</Wrapper>;
+  return (
+    <Wrapper>
+      <ErrorWrapper>
+        <ErrorGif src={ErrorGift} />
+      </ErrorWrapper>
+    </Wrapper>
+  );
 };
 
 export default NotFound;

@@ -1,14 +1,14 @@
 import { ResponseError } from "~/utils";
-import { AxiosErrorResponse, Credentials } from "~/utils/types";
+import { AxiosErrorResponse, Credentials, UserInfo } from "~/utils/types";
 import request from "../request";
 
 export default class AuthApi {
   static login = async ({
     email,
     password,
-  }: Credentials): Promise<AcessToken> => {
+  }: Credentials): Promise<UserInfo> => {
     try {
-      const { data } = await request.post<AcessToken>("/login", {
+      const { data } = await request.post<UserInfo>("/login", {
         email,
         password,
       });
